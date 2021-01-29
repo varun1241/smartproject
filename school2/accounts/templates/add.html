@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <center><h1>Registration Form</h1></center>
+<center>
+  <form class="col-4" method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+     <div class="form-group">
+      <label for="exampleFormControlInput1" style="background-color: white; color:black; font-size: 20px;margin-right:420px;" >Photo</label>
+      <input type="file" class="form-control" id="exampleFormControlInput1" name="document" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1" style="background-color: white; color:black; font-size: 20px;margin-right:420px;">Name</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" name="Employe_name" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1" style="background-color:  white; ; color:black; font-size: 20px;margin-right:420px;">Phone</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1"name="Employe_phone" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1" style="background-color:  white; ; color:black; font-size: 20px;margin-right:400px;">Adharnumber</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1"name="Employe_Email" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1" style="background-color:white; ; color: black; font-size: 20px;margin-right:400px;">Department</label>
+      <select class="form-control" id="exampleFormControlSelect1" name="Employe_department">
+        <option>Manager</option>
+        <option>Employee</option>
+        <option>Other Staff</option>
+       
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1" style="background-color:  white; ; color:black; font-size: 20px; margin-right:400px;">Address</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1"name="Employe_Adress" >
+    </div>
+    <input  class="btn btn-primary" type="submit" value="ADD">
+    
+  </form>
+   
+</center>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h1 style="margin-left: 150px; color:tomato; ">Sign up</h1>
+<form action="" method="post" style="margin-left: 20px; background-color: wheat; padding: 15px; border: solid  white;" class="col-4">
+  {% csrf_token %}
+{{ form | crispy }}
+<center><input type="submit" value="Sign Up" class="btn btn-warning"></center>
+
+
+</form>
+
+
+
+{% endblock %}
